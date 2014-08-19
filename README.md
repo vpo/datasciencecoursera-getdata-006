@@ -3,7 +3,8 @@
 **This github project contains the work to accomplish the project assignment of coursera course "Getting and Cleaning Data":**
 
 * The raw data (see subdirectory UCI_HAR_Dataset)
-* A tidy data set (see tidy_data_aggregate.csv) which contains the average value of all std and mean values grouped by subject and activity name 
+* A tidy data set (see tidy_data_aggregate.csv) which contains the average value of all std and mean values grouped by subject and activity name
+  * You can read the tidy data file with following R command: **_read.csv("tidy_data_aggregate.csv", sep = "\t")_**
 * A code book describing each variable and its values in the tidy data set (see CodeBook.md)
 * A recipe to go from 1 -> 2,3 (see below)
 
