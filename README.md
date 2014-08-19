@@ -19,7 +19,7 @@
     1. Reads and add subject to test data
   1. Merges training and test data sets
 1. Extracts only the measurements on the mean and standard deviation for each measurement
-  1. Sets header names for all columns
+  1. Sets header name for all columns
   1. Extracts mean and std value names + activity class + subject
 1. Uses descriptive activity names to name the activities in the data set
 1. Creates a second, independent tidy data set with the average of each variable for each activity and each subject
