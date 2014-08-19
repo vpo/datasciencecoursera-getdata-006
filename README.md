@@ -1,13 +1,13 @@
 # Coursera - Datascience - Getting and Cleaning Data 
 
-*This github project contains the work to accomplish the project assignment of coursera course "Getting and Cleaning Data":*
+**This github project contains the work to accomplish the project assignment of coursera course "Getting and Cleaning Data":**
 
 * The raw data (see subdirectory UCI_HAR_Dataset)
 * A tidy data set (see tidy_data_aggregate.csv)
 * A code book describing each variable and its values in the tidy data set (see CodeBook.md)
 * A recipe to go from 1 -> 2,3 (see below)
 
-*Recipe to convert raw data to tidy data by running run_analysis.R:*
+**Recipe to convert raw data to tidy data by running run_analysis.R:**
 
 1. Merges the training and the test sets to create one data set
   1. Reads training data set
