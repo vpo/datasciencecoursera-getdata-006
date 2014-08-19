@@ -45,13 +45,19 @@ run_analysis <- function() {
     ## done in 2. step
     
     ## 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
-    print("generate tid")
+    print("generate tidy data set")
     
-    #data_set_new <- data_set[,!(names(data_set) %in% c("ACTIVITY_CLASS","SUBJECT","ACTIVITY_NAME"))]
     data_set_aggr <- aggregate(data_set[,!(names(data_set) %in% c("ACTIVITY_CLASS","SUBJECT","ACTIVITY_NAME"))], 
                                list(data_set$SUBJECT, data_set$ACTIVITY_NAME), FUN = "mean")
+    
+    # rename columns
     colnames(data_set_aggr)[1] <- "Subject"
     colnames(data_set_aggr)[2] <- "Activity"
+    
+    for (i in 3:ncol(data_set_aggr)) {
+        cn <- colnames(data_set_aggr)[i]
+        colnames(data_set_aggr)[i] <- paste(cn, "-avg", sep="")
+    }
     
     ## write data to fs
     write.table(data_set_aggr, "tidy_data_aggregate.csv", sep="\t", row.name = FALSE)
