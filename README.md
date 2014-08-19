@@ -3,7 +3,7 @@
 **This github project contains the work to accomplish the project assignment of coursera course "Getting and Cleaning Data":**
 
 * The raw data (see subdirectory UCI_HAR_Dataset)
-* A tidy data set (see tidy_data_aggregate.csv)
+* A tidy data set (see tidy_data_aggregate.csv) which contains the average value of all std and mean values grouped by subject and activity name 
 * A code book describing each variable and its values in the tidy data set (see CodeBook.md)
 * A recipe to go from 1 -> 2,3 (see below)
 
@@ -22,7 +22,7 @@
   1. Extracts mean and std value names + activity class + subject
 1. Uses descriptive activity names to name the activities in the data set
 1. Creates a second, independent tidy data set with the average of each variable for each activity and each subject
-  1. Creates mean aggregate with grouping of subject and activity name
+  1. Creates mean (average) aggregate grouped by subject and activity name
   1. Renames columns
   1. Writes tidy data set to file
 
