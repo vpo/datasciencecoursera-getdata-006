@@ -29,8 +29,6 @@ run_analysis <- function() {
     ## set header names for all columns
     col_names <- read.csv("UCI_HAR_Dataset/features.txt", sep = " ", colClasses = c("integer", "character"), header = FALSE)
     colnames(data_set_all) <- c(col_names$V2, c("ACTIVITY_CLASS", "SUBJECT"))
-    #colnames(data_set_all)[562] <- "ACTIVITY_CLASS"
-    #colnames(data_set_all)[563] <- "SUBJECT"
     
     ## extract mean and std value names + activity class + subject
     col_names2 <- append(subset(col_names, grepl("mean\\(|std\\(", col_names[[2]]))$V2 , c("ACTIVITY_CLASS", "SUBJECT"))
@@ -47,6 +45,7 @@ run_analysis <- function() {
     ## 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
     print("generate tidy data set")
     
+    ## create mean aggregate with grouping of subject and activity name
     data_set_aggr <- aggregate(data_set[,!(names(data_set) %in% c("ACTIVITY_CLASS","SUBJECT","ACTIVITY_NAME"))], 
                                list(data_set$SUBJECT, data_set$ACTIVITY_NAME), FUN = "mean")
     
